@@ -12,6 +12,7 @@ const getProducts = async (req, res) => {
 const getProduct = async (req, res) => {
     const { id } = req.params
 
+    // determine if product exists in db
     if (!mongoose.Types.ObjectId.isValid(id)) {
         return res.status(404).json({error: 'No such product'})
     }
@@ -42,6 +43,7 @@ const createProduct = async (req, res) => {
 const deleteProduct = async (req, res) => {
     const { id } = req.params
 
+    // determine if product exists in db
     if (!mongoose.Types.ObjectId.isValid(id)) {
         return res.status(404).json({error: 'No such product'})
     }
@@ -59,6 +61,7 @@ const deleteProduct = async (req, res) => {
 const updateProduct = async (req, res) => {
     const { id } = req.params
 
+    // determine if product exists in db
     if (!mongoose.Types.ObjectId.isValid(id)) {
         return res.status(400).json({error: 'No such product'})
       }

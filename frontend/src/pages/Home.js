@@ -5,6 +5,7 @@ import ProductDetails from "../components/ProductDetails";
 const Home = () => {
     const { products, dispatch } = useProductsContext()
 
+    // useEffect hook is used to render all products on page load/product list change
     useEffect(() => {
         const fetchProducts = async () => {
             const response = await fetch('/api/products')
@@ -22,6 +23,7 @@ const Home = () => {
     return (
         <div className="home">
             <div className="products">
+                {/* iterate through products and display */}
                 {products && products.map(product => (
                     <ProductDetails product={product} key={product._id} />
                 ))}

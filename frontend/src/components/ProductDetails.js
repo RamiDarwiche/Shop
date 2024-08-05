@@ -1,7 +1,8 @@
-// date fns package
+// date fns package, will be used for admin tools
 import formatDistanceToNow from 'date-fns/formatDistanceToNow'
 
 const ProductDetails = ({ product }) => {
+    // html formatting for product component
     return (
         <div className="product-details">
             <h4>{product.title}</h4>

@@ -3,6 +3,7 @@ import { createContext, useReducer } from 'react'
 export const ProductsContext = createContext()
 
 export const productsReducer = (state, action) => {
+    // actions to edit products, will be later restricted to admin privileges
     switch(action.type) {
         case 'SET_PRODUCTS':
             return {
